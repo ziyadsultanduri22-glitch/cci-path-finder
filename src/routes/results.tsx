@@ -53,7 +53,7 @@ function ResultsPage() {
     );
   }
 
-  const top = outcome.results[0];
+  const top = outcome.results[0]!;
 
   return (
     <div className="min-h-screen">

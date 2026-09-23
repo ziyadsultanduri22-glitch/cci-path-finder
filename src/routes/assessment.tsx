@@ -32,7 +32,7 @@ function AssessmentPage() {
     return Math.min(saved.length, questions.length - 1);
   });
 
-  const question = questions[index];
+  const question = questions[index] ?? questions[0]!;
   const selected = answers.find((a) => a.questionId === question.id)?.optionId;
   const progress = Math.round(((index + 1) / questions.length) * 100);
   const isLast = index === questions.length - 1;
